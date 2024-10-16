@@ -1,5 +1,10 @@
 # DTO (Data transfer object)
 
+## Sequence Diagram
+
+The following sequence diagram illustrates the process of fetching user data:
+
+```mermaid
 sequenceDiagram
     participant Client as Client
     participant Controller as Controller
@@ -17,3 +22,6 @@ sequenceDiagram
     Service ->> DTO: Map Data Model to UserDTO
     Service -->> Controller: Returns UserDTO
     Controller -->> Client: JSON response with UserDTO
+```
+
+This diagram shows the interaction between the client, controller, service, data access layer, database, and the data transfer object (DTO) when a client requests user data.
